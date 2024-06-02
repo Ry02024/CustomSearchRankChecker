@@ -1,6 +1,8 @@
+%%writefile streamlit_app.py
 import streamlit as st
 from ranking import check_rankings
 from display import display_rankings
+from fetch import validate_api_key
 
 st.title("自然検索順位アプリ")
 
@@ -14,10 +16,13 @@ if not st.session_state.api_key or not st.session_state.cse_id:
     api_key = st.text_input("Google Search API Key")
     cse_id = st.text_input("Google Engine ID")
 
-    if api_key and cse_id:
-        st.session_state.api_key = api_key
-        st.session_state.cse_id = cse_id
-        st.experimental_rerun()  # 入力後に再読み込みしてAPIキーとIDをセッションに保存
+    if st.button("確認"):
+        if validate_api_key(api_key, cse_id):
+            st.session_state.api_key = api_key
+            st.session_state.cse_id = cse_id
+            st.experimental_rerun()  # 入力後に再読み込みしてAPIキーとIDをセッションに保存
+        else:
+            st.error("無効なAPIキーまたはカスタム検索エンジンIDです。再度確認してください。")
 else:
     st.success("APIキーとカスタム検索エンジンIDが設定されました。")
 
