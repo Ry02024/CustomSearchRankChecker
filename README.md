@@ -7,28 +7,8 @@ CustomSearchRankCheckerは、Googleカスタム検索APIを使用して特定の
 * ターゲットURLとキーワードの指定
 * 取得する検索結果の最大件数の設定（デフォルトは30件、最大100件まで設定可能）
 * 指定されたURLのキーワードランキングを表示
-# インストール
-リポジトリをクローンします:
-
-bash
-```コードをコピーする
-git clone https://github.com/yourusername/KeywordRankChecker.git
-cd KeywordRankChecker
-```
-必要な依存関係をインストールします:
-
-bash
-```コードをコピーする
-pip install -r requirements.txt
-```
-使用方法
-Streamlitアプリケーションを実行します:
-
-bash
-```コードをコピーする
-streamlit run streamlit_app.py
-```
-ウェブブラウザを開き、ローカルのStreamlitサーバー（通常は http://localhost:8501）にアクセスします。
+# 使用方法
+ウェブブラウザを開き、[CustomSearchRankChecker デモ](https://customsearchrankchecker-kfdbfycgxlkzv9csmoab4v.streamlit.app/)にアクセスします。
 
 以下の手順に従います:
 
