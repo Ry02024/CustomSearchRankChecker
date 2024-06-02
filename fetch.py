@@ -17,3 +17,8 @@ def fetch_search_results(keyword, api_key, cse_id, num_results=10, start=1):
         print(f"検索に失敗しました。ステータスコード: {response.status_code}")
         print(f"エラーメッセージ: {response.text}")
         return None
+
+def validate_api_key(api_key, cse_id):
+    test_query = "test"
+    response = fetch_search_results(test_query, api_key, cse_id, num_results=1)
+    return response is not None
