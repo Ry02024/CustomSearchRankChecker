@@ -49,8 +49,8 @@ Google APIキー
 Streamlit
 Googleカスタム検索API
 # バージョン
-v1.0
-初期リリース
+* v1.0
+  * 初期リリース
 Google APIキーとカスタム検索エンジンIDの入力
 ターゲットURLとキーワードの指定
 最大100件までの検索結果取得設定
