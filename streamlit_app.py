@@ -1,4 +1,3 @@
-%%writefile streamlit_app.py
 import streamlit as st
 from ranking import check_rankings
 from display import display_rankings
